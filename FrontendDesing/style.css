@@ -5,7 +5,7 @@
 }
 
 :root {
-    --maincolor: #FF512B;
+    --maincolor: red;
     --white: #ffffff;
     --black: #000;
 }
@@ -31,4 +31,13 @@
 
 ul>li>a {
     color: var(--white) !important;
+}
+
+
+/* banner section */
+
+.banner {
+    margin-top: -16px;
+    background-color: var(--maincolor);
+    color: white;
 }
