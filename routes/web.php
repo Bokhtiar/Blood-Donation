@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DivisionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,6 @@ Route::group(["as"=>'user.', "prefix"=>'user',  "middleware"=>['auth','user']],f
 
 Route::group(["as"=>'admin.', "prefix"=>'admin', "middleware"=>['auth','admin']],function(){
     Route::get('dashboard', [App\Http\Controllers\Admin\AdminDashboardController::class, 'index'])->name('dashboard');
+    //division
+    Route::resource('division', DivisionController::class);
 });
