@@ -13,18 +13,20 @@
                       <thead>
                         <tr>
                           <th scope="col">Index</th>
+                          <th scope="col">Divsion Name</th>
                           <th scope="col">Name</th>
                           <th scope="col">Action</th>
                         </tr>
                       </thead>
                       <tbody>
-                          @foreach ($divisions as $item)
+                          @foreach ($distrcits as $item)
                           <tr>
                             <td>{{$loop->index +1}}</td>
+                            <td>{{$item->division ? $item->division->name :''}}</td>
                             <td>{{$item->name}}</td>
                             <td class="form-inline">
-                                <a href="@route('admin.division.edit', $item->id)" class="btn btn-sm btn-success">Edit</a>
-                                <form action="@route('admin.division.destroy', $item->id)" method="POST">
+                                <a href="@route('admin.district.edit', $item->id)" class="btn btn-sm btn-success">Edit</a>
+                                <form action="@route('admin.district.destroy', $item->id)" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-sm btn-danger" type="submit">Delete</button>
@@ -45,18 +47,27 @@
                 <div class="card top-selling overflow-auto">
 
                   <div class="card-body pb-0">
-                    <h5 class="card-title">{{@$edit ? 'Division Update' : 'Divsion Create'}} <span></span></h5>
+                    <h5 class="card-title">{{@$edit ? 'District Update' : 'District Create'}} <span></span></h5>
                     <div>
                         @if(@$edit)
-                        <form action="@route('admin.division.update', @$edit->id)" method="POST" >
+                        <form action="@route('admin.district.update', @$edit->id)" method="POST" >
                             @method('Put')
                         @else
-                        <form action="@route('admin.division.store')" method="POST" >
+                        <form action="@route('admin.district.store')" method="POST" >
                         @endif
                             @csrf
                             <div class="form-group">
-                                <label for="">Division Name</label>
-                                <input type="text" value="{{@$edit->name}}" placeholder="Enter Division Name" name="name" class="form-control" id="">
+                                <label for="">Select Divsion</label>
+                                <select name="division_id" class="form-control" id="">
+                                    <option value="">Select Divsion</option>
+                                    @foreach ($divisions as $div)
+                                    <option value="{{$div->id}}" {{ $div->id == @$edit->division_id ? 'Selected' : '' }}>{{$div->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="">District Name</label>
+                                <input type="text" value="{{@$edit->name}}" placeholder="Enter District Name" name="name" class="form-control" id="">
                             </div>
 
                             <div class="form-group my-3">

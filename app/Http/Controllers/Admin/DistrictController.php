@@ -18,18 +18,9 @@ class DistrictController extends Controller
     {
         $divisions = Division::all();
         $distrcits = District::all();
-        return view('admin.division.index', compact('divisions'));
+        return view('admin.district.index', compact('divisions', 'distrcits'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -39,10 +30,11 @@ class DistrictController extends Controller
      */
     public function store(Request $request)
     {
-        $division = new Division;
-        $division->name = $request->name;
-        $division->save();
-        return redirect()->route('admin.division.index');
+        $dis = new District;
+        $dis->division_id = $request->division_id;
+        $dis->name = $request->name;
+        $dis->save();
+        return redirect()->route('admin.district.index');
     }
 
     /**
@@ -64,9 +56,10 @@ class DistrictController extends Controller
      */
     public function edit($id)
     {
-        $edit = Division::find($id);
+        $edit = district::find($id);
+        $distrcits = District::all();
         $divisions = Division::all();
-        return view('admin.division.index', compact('divisions', 'edit'));
+        return view('admin.district.index', compact('divisions', 'edit','distrcits'));
     }
 
     /**
@@ -78,10 +71,11 @@ class DistrictController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $division = Division::find($id);
-        $division->name = $request->name;
-        $division->save();
-        return redirect()->route('admin.division.index');
+    $dis = District::find($id);
+        $dis->division_id = $request->division_id;
+        $dis->name = $request->name;
+        $dis->save();
+        return redirect()->route('admin.district.index');
     }
 
     /**
@@ -92,7 +86,7 @@ class DistrictController extends Controller
      */
     public function destroy($id)
     {
-        Division::find($id)->delete();
-        return redirect()->route('admin.division.index');
+        District::find($id)->delete();
+        return redirect()->route('admin.district.index');
     }
 }

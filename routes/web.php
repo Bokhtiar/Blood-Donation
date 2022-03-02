@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DivisionController;
+use App\Http\Controllers\Admin\DistrictController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use App\Http\Controllers\Admin\DivisionController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
 });
 
 Auth::routes();
@@ -31,4 +32,8 @@ Route::group(["as"=>'admin.', "prefix"=>'admin', "middleware"=>['auth','admin']]
     Route::get('dashboard', [App\Http\Controllers\Admin\AdminDashboardController::class, 'index'])->name('dashboard');
     //division
     Route::resource('division', DivisionController::class);
+    //district
+    Route::resource('district', DistrictController::class);
+    //logout
+    Route::get('logout', [App\Http\Controllers\Admin\AdminDashboardController::class, 'logout']);
 });
