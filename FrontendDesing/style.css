@@ -41,3 +41,16 @@ ul>li>a {
     background-color: var(--maincolor);
     color: white;
 }
+
+
+/* card section */
+
+.card-image {
+    border-radius: 50px;
+    background-color: #5499C7;
+}
+
+.btn-bg-clr {
+    background-color: var(--maincolor);
+    color: white;
+}
