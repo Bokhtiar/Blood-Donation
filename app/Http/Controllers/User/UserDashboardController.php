@@ -22,9 +22,9 @@ class UserDashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function why_blood()
     {
-        //
+        return view('user.why_give_blood');
     }
 
     /**

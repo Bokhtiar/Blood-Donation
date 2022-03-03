@@ -21,6 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//give blood 
+
+Route::get('/give/blood', [App\Http\Controllers\User\UserDashboardController::class, 'why_blood']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
