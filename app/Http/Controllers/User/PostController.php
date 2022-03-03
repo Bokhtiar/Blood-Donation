@@ -4,10 +4,10 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Contact;
+use App\Models\Post;
 use Auth;
 
-class UserDashboardController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class UserDashboardController extends Controller
      */
     public function index()
     {
-        return view('user.dashboard.index');
+        return view('user.dashboard.post.index');
     }
 
     /**
@@ -24,9 +24,9 @@ class UserDashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function why_blood()
+    public function create()
     {
-        return view('user.why_give_blood');
+        return view('user.dashboard.post.create');
     }
 
     /**
@@ -35,9 +35,18 @@ class UserDashboardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function donation_process()
+    public function store(Request $request)
     {
-        return view('user.donation_process');
+        $post = new Post;
+        $post->title = $request->title;
+        $post->des = $request->des;
+        $post->date = $request->date;
+        $post->time = $request->time;
+        $post->location = $request->location;
+        $post->phone = $request->phone;
+        $post->user_id = Auth::id();
+        $post->save();
+        return redirect()->route('user.dashboard');
     }
 
     /**
@@ -46,9 +55,9 @@ class UserDashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function about()
+    public function show($id)
     {
-        return view('user.about');
+        //
     }
 
     /**
@@ -57,9 +66,9 @@ class UserDashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function contact()
+    public function edit($id)
     {
-        return view('user.contact');
+        //
     }
 
     /**
@@ -69,14 +78,9 @@ class UserDashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function contact_store(Request $request)
+    public function update(Request $request, $id)
     {
-        $contact = new Contact;
-        $contact->name = $request->name;
-        $contact->email = $request->email;
-        $contact->des = $request->des;
-        $contact->save();
-        return redirect('/');
+        //
     }
 
     /**
@@ -85,9 +89,8 @@ class UserDashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function logout()
+    public function destroy($id)
     {
-        Auth::logout();
-        return redirect('/');
+        //
     }
 }

@@ -31,6 +31,11 @@
                 <td>{{$item->location}}</td>
                 <td>{{$item->phone}}</td>
                 <td>
+                    @if($item->status == 0)
+                    <a href="" class="btn btn-sm btn-danger">Pending</a>
+                    @else
+                    <a href="" class="btn btn-sm btn-success">Success</a>
+                    @endif
                     <a class="btn btn-sm btn-success" href="">View</a>
                     <a class="btn btn-sm btn-danger" href="">Delete</a>
                 </td>
