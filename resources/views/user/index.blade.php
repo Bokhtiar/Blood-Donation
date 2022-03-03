@@ -5,7 +5,7 @@
 <section class="banner">
     <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4 form-inline text-center">
-            <img class="container ml-5" style="" height="300px" src="{{asset('user')}}/logo2.jpg" alt="img-fluid">
+            <img class="container ml-5" style="" height="300px" src="{{asset('user')}}/blood8.svg" alt="img-fluid">
         </div>
 
         <div class="col-sm-12 col-md-8 col-lg-8">
@@ -86,86 +86,28 @@
         <h2 class="text-center" style="background-color: red; color: white; padding: 10px;">Argent Need Blood</h2>
     </p>
     <div class="row">
+        @foreach($posts as $post)
         <div class="col-sm-12 col-lg-6 col-md-6 my-4">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card">
                         <div class="card-header form-inline">
                             <img src="u1.jpg" height="50px" alt="">
-                            <h4 class="ml-3">Shadin</h4>
+                            <h4 class="ml-3">{{$post->user ? $post->user->name : ''}}</h4>
                         </div>
                         <div class="card-body">
-                            <p>hings To Do Before Blood Donation: Consider Taking Someone Along For Company:This </p>
+                            <p>{{$post->des}} </p>
                             <p class="font-weight-bold">
-                                <span>Location : Dhaka</span><br>
-                                <span>Contact : 0198210212</span>
+                                <span>Location : {{$post->location}}</span><br>
+                                <span>Contact : {{$post->phone}}</span>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
 
-        <div class="col-sm-12 col-lg-6 col-md-6 my-4">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card">
-                        <div class="card-header form-inline">
-                            <img src="u1.jpg" height="50px" alt="">
-                            <h4 class="ml-3">Shadin</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>hings To Do Before Blood Donation: Consider Taking Someone Along For Company:This </p>
-                            <p class="font-weight-bold">
-                                <span>Location : Dhaka</span><br>
-                                <span>Contact : 0198210212</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-12 col-lg-6 col-md-6">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card">
-                        <div class="card-header form-inline">
-                            <img src="u1.jpg" height="50px" alt="">
-                            <h4 class="ml-3">Shadin</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>hings To Do Before Blood Donation: Consider Taking Someone Along For Company:This </p>
-                            <p class="font-weight-bold">
-                                <span>Location : Dhaka</span><br>
-                                <span>Contact : 0198210212</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-sm-12 col-lg-6 col-md-6">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card">
-                        <div class="card-header form-inline">
-                            <img src="u1.jpg" height="50px" alt="">
-                            <h4 class="ml-3">Shadin</h4>
-                        </div>
-                        <div class="card-body">
-                            <p>hings To Do Before Blood Donation: Consider Taking Someone Along For Company:This </p>
-                            <p class="font-weight-bold">
-                                <span>Location : Dhaka</span><br>
-                                <span>Contact : 0198210212</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 </section>
@@ -177,7 +119,7 @@
     </p>
     <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4">
-            <img src="card.jpg" height="200px" width="100%" alt="">
+            <img src="{{asset('user')}}/card.jpg" height="200px" width="100%" alt="">
         </div>
         <div class="col-sm-12 col-md-8 col-lg-8">
             <p class="lead ">

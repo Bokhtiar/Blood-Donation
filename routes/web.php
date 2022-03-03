@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DivisionController;
 use App\Http\Controllers\Admin\DistrictController;
 use App\Http\Controllers\User\PostController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,8 @@ use App\Http\Controllers\User\PostController;
 */
 
 Route::get('/', function () {
-    return view('user.index');
+    $posts = Post::where('status', 1)->get();
+    return view('user.index', compact('posts'));
 });
 
 Auth::routes();
