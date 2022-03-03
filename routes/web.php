@@ -25,6 +25,8 @@ Auth::routes();
 
 Route::get('/give/blood', [App\Http\Controllers\User\UserDashboardController::class, 'why_blood']);
 Route::get('/donation/process', [App\Http\Controllers\User\UserDashboardController::class, 'donation_process']);
+Route::get('about', [App\Http\Controllers\User\UserDashboardController::class, 'about']);
+Route::get('contact', [App\Http\Controllers\User\UserDashboardController::class, 'contact']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

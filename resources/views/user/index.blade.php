@@ -26,7 +26,7 @@
         <div class="col-sm-12 col-md-3 col-lg-3">
             <div class="card">
                 <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="b1.png" alt="">
+                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b1.png" alt="">
                         <br><span class="h5">Blood Donat Login</span>
                     </p>
                 </div>
@@ -39,7 +39,7 @@
         <div class="col-sm-12 col-md-3 col-lg-3">
             <div class="card">
                 <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="b2.png" alt="">
+                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b2.png" alt="">
                         <br><span class="h5">Eligibility Requirement</span>
                     </p>
                 </div>
@@ -52,7 +52,7 @@
         <div class="col-sm-12 col-md-3 col-lg-3">
             <div class="card">
                 <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="b3.png" alt="">
+                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b3.png" alt="">
                         <br><span class="h5">Donating Today</span>
                     </p>
                 </div>
@@ -65,7 +65,7 @@
         <div class="col-sm-12 col-md-3 col-lg-3">
             <div class="card">
                 <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="b4.png" alt="">
+                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b4.png" alt="">
                         <br><span class="h5">Learn About Blood</span>
                     </p>
                 </div>

@@ -1,0 +1,3 @@
+
+
+<div class="mapouter"><div class="gmap_canvas"><iframe width="1080" height="378" id="gmap_canvas" src="https://maps.google.com/maps?q=daffodil%20internation%20university&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br><style>.mapouter{position:relative;text-align:right;height:378px;width:1080px;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:378px;width:1080px;}</style></div></div>

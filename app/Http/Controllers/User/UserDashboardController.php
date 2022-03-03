@@ -44,9 +44,9 @@ class UserDashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function about()
     {
-        //
+        return view('user.about');
     }
 
     /**
@@ -55,9 +55,9 @@ class UserDashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function contact()
     {
-        //
+        return view('user.contact')
     }
 
     /**
