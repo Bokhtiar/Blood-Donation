@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DivisionController;
 use App\Http\Controllers\Admin\DistrictController;
 use App\Http\Controllers\User\PostController;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//give blood 
+//give blood
 
 Route::get('/give/blood', [App\Http\Controllers\User\UserDashboardController::class, 'why_blood']);
 Route::get('/donation/process', [App\Http\Controllers\User\UserDashboardController::class, 'donation_process']);
 Route::get('about', [App\Http\Controllers\User\UserDashboardController::class, 'about']);
 Route::get('contact', [App\Http\Controllers\User\UserDashboardController::class, 'contact']);
 Route::post('contact/store', [App\Http\Controllers\User\UserDashboardController::class, 'contact_store']);
+Route::get('/blood/post', [App\Http\Controllers\User\PostController::class, 'post_list']);
+Route::get('post/detail/{id}', [App\Http\Controllers\User\PostController::class, 'detail']);
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -41,6 +46,8 @@ Route::group(["as"=>'user.', "prefix"=>'user',  "middleware"=>['auth','user']],f
     Route::get('/post/create', [App\Http\Controllers\User\PostController::class, 'create']);
     Route::post('/post/store', [App\Http\Controllers\User\PostController::class, 'store']);
     Route::get('/post/list', [App\Http\Controllers\User\PostController::class, 'index']);
+    Route::post('post/comment/store/{id}', [App\Http\Controllers\User\CommentController::class, 'store']);
+
 
 });
 

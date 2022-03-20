@@ -1,78 +1,138 @@
 @extends('layouts.user.app')
 @section('user_content')
 
-<!-- banner section start -->
-<section class="banner">
-    <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4 form-inline text-center">
-            <img class="container ml-5" style="" height="300px" src="{{asset('user')}}/blood8.svg" alt="img-fluid">
-        </div>
+<!--SLDIER SECTION START HERE -->
 
-        <div class="col-sm-12 col-md-8 col-lg-8">
-            <div class="banner-text">
-                <h1 class="text-center" style="padding-top: 100px">Start Saving Lives</h1>
-                <h6 class="text-center">Become a Donor or request for blood and help save lives</h6>
-                <h6 class="text-center"><a class="text-center btn btn-outline-danger" href=""><span class="text-center">Get Registration</span></a></h6>
-            </div>
-            <img class="container" style="" height="100px" src="{{asset('user')}}/blood8.svg" alt="">
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ asset('user/b1.jpg') }}" class="d-block w-100" style="height: 500px;" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
         </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('user/b1.png') }}" class="d-block w-100" style="height: 500px;" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('user/card.jpg') }}" class="d-block w-100" style="height: 500px;" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff0000" fill-opacity="1" d="M0,64L80,64C160,64,320,64,480,85.3C640,107,800,149,960,154.7C1120,160,1280,128,1360,112L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-</section>
-<!-- banner section end -->
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
+  </div>
+<!--SELIDER SECTION END HERE-->
+
+<!--SAVE LIFE START HERE -->
+  <section class="my-5">
+
+      <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="mt-2">
+                        <h1 style="color: #ff3f62!important;font-size: 2.5rem;">We Save Lives</h1>
+                        <br>
+                        <p class="save-life-heading">Find blood donors near your location and make a blood request in less than 5 minutes.</p>
+                    </div>
+                </div>
+            </div>
+
+              <div class="row my-5">
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                      <div class="text-center">
+                        <img height="64px" width="65px" class="mb-2" src="https://www.save.life/site/themes/savelife/assets/images/icons/features/blood.svg" alt="">
+                        <br><span class="text-center save-life-text">Find Blood</span>
+                    </div>
+                      <div class="text-center">
+                        <p class=" save-life-body">
+                            You don't have to pay anything, Save Life Connect is forever Free !
+                        </p>
+                      </div>
+                  </div>
+
+
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="text-center">
+                      <img height="64px" width="65px" class="mb-2" src="https://www.save.life/site/themes/savelife/assets/images/icons/features/notifications.svg" alt="">
+                      <br><span class="text-center  save-life-text">Get Notified</span>
+                  </div>
+                    <div class="text-center">
+                      <p class="save-life-body">
+                          You don't have to pay anything, Save Life Connect is forever Free !
+                      </p>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="text-center">
+                      <img height="64px" width="65px" class="mb-2" src="https://www.save.life/site/themes/savelife/assets/images/icons/features/free.svg" alt="">
+                      <br><span class="text-center  save-life-text">Forever Free</span>
+                  </div>
+                    <div class="text-center">
+                      <p class="save-life-body">
+                          You don't have to pay anything, Save Life Connect is forever Free !
+                      </p>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+<!--SAVE LIFE END HERE-->
 
 <section class="container my-5">
-    <div class="row">
-        <div class="col-sm-12 col-md-3 col-lg-3">
-            <div class="card">
-                <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b1.png" alt="">
-                        <br><span class="h5">Blood Donat Login</span>
-                    </p>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card" style="width: 18rem; border-radius:14px; height:270px">
+                        <div class="card-body">
+                          <h5 class="card-title">Can I Blood Donate?</h5>
+                          <p class="card-text my-4">Most people are eligible to donate life-saving blood..</p>
+                          <a href="#" class="card-link text-danger text-uppercase font-weight-bold">Learn More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p>Usa Donation information. 100% Privacy Protected! Find what you are looking for Here. 99% Match on Usa Donation</p>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card" style="width: 18rem; border-radius:14px; height:270px">
+                        <div class="card-body">
+                          <h5 class="card-title">Prepare to Donate</h5>
+                          <p class="card-text my-4">Donating is pretty easy…and we have some tips to make it even easier.</p>
+                          <a href="#" class="card-link text-danger text-uppercase font-weight-bold ">Learn More</a>
+                        </div>
+                    </div>
                 </div>
-                <a href="" class="text-center btn btn-bg-clr">Login</a>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3">
-            <div class="card">
-                <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b2.png" alt="">
-                        <br><span class="h5">Eligibility Requirement</span>
-                    </p>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="card" style="width: 18rem; border-radius:14px; height:270px">
+                        <div class="card-body">
+                          <h5 class="card-title">Know Your Blood Type</h5>
+                          <p class="card-text my-4">If you’re blood type is O-Negative, you’re a “Universal Donor,” because your blood can be transfused into anyone in an emergency.</p>
+                          <a href="#" class="card-link text-danger text-uppercase font-weight-bold">Learn More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p>Whole Blood Donation · Donation frequency: Every 56 days, up to 6 times a year* · You must be in good health and feeling well*</p>
-                </div>
-                <a href="" class="text-center btn btn-bg-clr">Learn More</a>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3">
-            <div class="card">
-                <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b3.png" alt="">
-                        <br><span class="h5">Donating Today</span>
-                    </p>
-                </div>
-                <div class="card-body">
-                    <p>Things To Do Before Blood Donation: Consider Taking Someone Along For Company:This will achieve two things for you, </p>
-                </div>
-                <a href="" class="text-center btn btn-bg-clr">Start Now</a>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3">
-            <div class="card">
-                <div class="card-header">
-                    <p class="text-center "><img class="card-image" height="40px" width="40px" src="{{asset('user')}}/b4.png" alt="">
-                        <br><span class="h5">Learn About Blood</span>
-                    </p>
-                </div>
-                <div class="card-body">
-                    <p>The solid part of your blood contains red blood cells, white blood cells, and platelets. Red blood cells (RBC) deliver oxygen </p>
-                </div>
-                <a href="" class="text-center btn btn-bg-clr">Learn More</a>
             </div>
         </div>
     </div>
@@ -80,8 +140,108 @@
 <!-- card section -->
 
 
+<section>
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-8 col-lg-8">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="">
+                        <h1 style="color: #ff3f62!important;font-size: 2.5rem;">Lives Saved</h1>
+                        <p class="save-heading">Find blood donors near your location and make a blood request in less than 5 minutes.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--review system -->
+            <style>
+                .save{
+                    background: #34495E;
+                    color: white;
+                    margin: 42px;
+                    width: 100%;
+                }
+
+            </style>
+            <section class="row">
+                <div class="col-sm-12 col-md-3 col-lg-3 save card " >
+
+                        <div class="row my-3 ">
+                            <div class="col-md-3">
+                                <img style=" border-radius: 38px;" height="65px" width="65px" src="https://www.save.life/site/themes/savelife/assets/images/testimonials/hamza.svg" alt="">
+                            </div>
+                            <div class="col-md-9 pl-4">
+                                <span>
+                                    <span class="h7 fa fa-star checked"></span>
+                                    <span class="h7 fa fa-star checked"></span>
+                                    <span class="h7 fa fa-star checked"></span>
+                                    <span class="h7 fa fa-star"></span>
+                                    <span class="h7 fa fa-star"></span>
+                                </span><br>
+                                <span>name</span>
+                                <p>bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="my-2">
+                            <p class=""  style="font-style: italic;">" We don't have to worry anymore for our emergencies. We simply request blood immediately get contacted by donors."</p>
+                        </div>
+                </div>  <!--end here card -->
+
+
+                <div class="col-sm-12 col-md-3 col-lg-3 save card ">
+                    <div class="row my-3">
+                        <div class="col-md-3">
+                            <img style=" border-radius: 38px;" height="65px" width="65px" src="https://www.save.life/site/themes/savelife/assets/images/testimonials/hamza.svg" alt="">
+                        </div>
+                        <div class="col-md-9 pl-4">
+                            <span>
+                                <span class="h7 fa fa-star checked"></span>
+                                <span class="h7 fa fa-star checked"></span>
+                                <span class="h7 fa fa-star checked"></span>
+                                <span class="h7 fa fa-star"></span>
+                                <span class="h7 fa fa-star"></span>
+                            </span><br>
+                            <span>name</span>
+                            <p>bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="my-2">
+                        <p class=""  style="font-style: italic;" >" We don't have to worry anymore for our emergencies. We simply request blood immediately get contacted by donors."</p>
+                    </div>
+                </div> <!--end here card -->
+
+
+
+                <div class="col-sm-12 col-md-3 col-lg-3 card save">
+                    <div class="row my-3">
+                        <div class="col-md-3">
+                            <img style=" border-radius: 38px;" height="65px" width="65px" src="https://www.save.life/site/themes/savelife/assets/images/testimonials/hamza.svg" alt="">
+                        </div>
+                        <div class="col-md-9 pl-4">
+                            <span>
+                                <span class="h7 fa fa-star checked"></span>
+                                <span class="h7 fa fa-star checked"></span>
+                                <span class="h7 fa fa-star checked"></span>
+                                <span class="h7 fa fa-star"></span>
+                                <span class="h7 fa fa-star"></span>
+                            </span><br>
+                            <span>name</span>
+                            <p>bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="my-2">
+                        <p class="" style="font-style: italic;">" We don't have to worry anymore for our emergencies. We simply request blood immediately get contacted by donors."</p>
+                    </div>
+                </div> <!--end here card -->
+
+
+            </section>
+        </div>
+    </div>
+</section>
+
 <!-- post start here -->
-<section class="container">
+{{-- <section class="container">
     <p class="btn-bg-clr">
         <h2 class="text-center" style="background-color: red; color: white; padding: 10px;">Argent Need Blood</h2>
     </p>
@@ -110,10 +270,10 @@
 
 
     </div>
-</section>
+</section> --}}
 <!--post end here-->
 
-<section class="container">
+{{-- <section class="container">
     <p class="btn-bg-clr">
         <h2 class="text-center" style="background-color: red; color: white; padding: 10px;"> Ambulance Facilites</h2>
     </p>
@@ -130,7 +290,7 @@
             </p>
         </div>
     </div>
-</section>
+</section> --}}
 <!--aboulance end-->
 
 @endsection

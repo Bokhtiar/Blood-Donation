@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto+Slab&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -14,7 +14,10 @@
 /* header section */
 
 .header {
-    background-color: red;
+    background-color: 	#34495E;
+}
+.navbar-nav>li>a{
+    color: black;
 }
 
 .navbar-nav>li>a.active,
@@ -33,6 +36,10 @@ ul>li>a {
     color: var(--white) !important;
     font-size: 16px;
     font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 4px;
+    margin-left: 40px;
+
 }
 
 
@@ -56,11 +63,36 @@ ul>li>a {
     color: white;
 }
 
+/* save life starte here */
+.save-life-text{
+    font-family: Open Sans,sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.save-life-body{
+    font-size: 17px;
+    color: #999;
+    padding: 10px;
+}
+.save-life-heading{
+    color: #4a4a4a;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: -16px;
 
+}
+
+/* lives saved */
+.save-heading{
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
 /* footer*/
 
 .site-footer {
-    background-color: red;
+    background-color: #34495E;
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;

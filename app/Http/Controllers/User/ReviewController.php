@@ -3,12 +3,9 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Models\Comment;
 use Illuminate\Http\Request;
-use App\Models\Post;
-use Illuminate\Support\Facades\Auth;
 
-class PostController extends Controller
+class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('user.dashboard.post.index');
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('user.dashboard.post.create');
+        //
     }
 
     /**
@@ -38,16 +35,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post = new Post;
-        $post->title = $request->title;
-        $post->des = $request->des;
-        $post->date = $request->date;
-        $post->time = $request->time;
-        $post->location = $request->location;
-        $post->phone = $request->phone;
-        $post->user_id = Auth::id();
-        $post->save();
-        return redirect()->route('user.dashboard');
+        //
     }
 
     /**
@@ -56,10 +44,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function post_list()
+    public function show($id)
     {
-        $posts = Post::where('status', 1)->get();
-        return view('user.post_list', compact('posts'));
+        //
     }
 
     /**
@@ -68,12 +55,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function detail($id)
+    public function edit($id)
     {
-        $posts = Post::where('status', 1)->get();
-        $post = Post::find($id);
-        $comments = Comment::where('post_id', $id)->get();
-        return view('user.post_detail', compact('post', 'comments','posts'));
+        //
     }
 
     /**
