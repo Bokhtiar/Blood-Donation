@@ -46,7 +46,7 @@ li {
                         <a class="nav-link " href="{{url('blood/post')}}">Blood Post <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('donation/process')}}">Reviews <span class="sr-only">(current)</span></a>
+                        <a class="nav-link " href="{{url('review')}}">Reviews <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="{{url('about')}}">About-Us</a>

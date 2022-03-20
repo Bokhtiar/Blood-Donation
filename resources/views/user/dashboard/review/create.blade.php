@@ -15,31 +15,13 @@
         </div>
 
         <div class="col-sm-12 col-md-9 col-lg-9">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Index</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Location</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(App\Models\Post::where('user_id', Auth::id())->get() as $item)
-                <tr>
-                <th scope="row">{{$loop->index + 1}}</th>
-                <td>{{$item->title}}</td>
-                <td>{{$item->location}}</td>
-                <td>{{$item->phone}}</td>
-                <td>
-                    <a class="btn btn-sm btn-success" href="">View</a>
-                    <a class="btn btn-sm btn-danger" href="">Delete</a>
-                </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+            <h2 class="text-center">Review Create Section</h2>
+        <form action="{{ url('user/review/store') }}" method="POST">
+            @csrf
+            <label for="">Review</label>
+            <textarea name="review" id="" cols="10" rows="4" class="form-control" placeholder="Review"></textarea>
+            <input type="submit" class="btn btn-sm btn-success my-2" value="Create Review" name="" id="">
+        </form>
         </div>
     </section>
     </section>

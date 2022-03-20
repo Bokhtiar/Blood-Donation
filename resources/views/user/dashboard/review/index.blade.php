@@ -19,28 +19,14 @@
             <thead>
                 <tr>
                     <th scope="col">Index</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Location</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Review</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach(App\Models\Post::where('user_id', Auth::id())->get() as $item)
+                @foreach($reviews as $item)
                 <tr>
-                <th scope="row">{{$loop->index + 1}}</th>
-                <td>{{$item->title}}</td>
-                <td>{{$item->location}}</td>
-                <td>{{$item->phone}}</td>
-                <td>
-                    @if($item->status == 0)
-                    <a href="" class="btn btn-sm btn-danger">Pending</a>
-                    @else
-                    <a href="" class="btn btn-sm btn-success">Success</a>
-                    @endif
-                    <a class="btn btn-sm btn-success" href="">View</a>
-                    <a class="btn btn-sm btn-danger" href="">Delete</a>
-                </td>
+                    <th scope="row">{{$loop->index + 1}}</th>
+                    <td>{{$item->review}}</td>
                 </tr>
                 @endforeach
             </tbody>

@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DivisionController;
 use App\Http\Controllers\Admin\DistrictController;
 use App\Http\Controllers\User\PostController;
 use App\Models\Post;
+use App\Models\Review;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -20,7 +21,8 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     $posts = Post::where('status', 1)->get();
-    return view('user.index', compact('posts'));
+    $reviews = Review::get()->take(6);
+    return view('user.index', compact('posts','reviews'));
 });
 
 Auth::routes();
@@ -34,6 +36,7 @@ Route::get('contact', [App\Http\Controllers\User\UserDashboardController::class,
 Route::post('contact/store', [App\Http\Controllers\User\UserDashboardController::class, 'contact_store']);
 Route::get('/blood/post', [App\Http\Controllers\User\PostController::class, 'post_list']);
 Route::get('post/detail/{id}', [App\Http\Controllers\User\PostController::class, 'detail']);
+Route::get('review', [App\Http\Controllers\User\ReviewController::class, 'list']);
 
 
 
@@ -46,6 +49,10 @@ Route::group(["as"=>'user.', "prefix"=>'user',  "middleware"=>['auth','user']],f
     Route::get('/post/create', [App\Http\Controllers\User\PostController::class, 'create']);
     Route::post('/post/store', [App\Http\Controllers\User\PostController::class, 'store']);
     Route::get('/post/list', [App\Http\Controllers\User\PostController::class, 'index']);
+    Route::get('/review', [App\Http\Controllers\User\ReviewController::class, 'index']);
+
+    Route::get('/review/create', [App\Http\Controllers\User\ReviewController::class, 'create']);
+    Route::post('review/store', [App\Http\Controllers\User\ReviewController::class, 'store']);
     Route::post('post/comment/store/{id}', [App\Http\Controllers\User\CommentController::class, 'store']);
 
 

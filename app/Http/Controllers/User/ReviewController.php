@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
@@ -14,7 +16,8 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+        $reviews = Review::all();
+        return view('user.dashboard.review.index', compact('reviews'));
     }
 
     /**
@@ -24,7 +27,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.dashboard.review.create');
     }
 
     /**
@@ -35,7 +38,11 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $review = new Review();
+        $review->user_id = Auth::id();
+        $review->review = $request->review;
+        $review->save();
+        return back();
     }
 
     /**
@@ -44,9 +51,10 @@ class ReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function list()
     {
-        //
+        $reviews = Review::all();
+        return view('user.review', compact('reviews', compact('reviews')));
     }
 
     /**

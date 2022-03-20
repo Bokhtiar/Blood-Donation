@@ -7,6 +7,8 @@
             <li class="list-group-item">{{Auth::user()->name}} Dashboard</li>
             <li class="list-group-item"><a class="text-dark" href="{{url('user/post/list')}}">Post Lists</a></li>
             <li class="list-group-item"><a class="text-dark" href="{{url('user/post/create')}}">Create Post</a></li>
+            <li class="list-group-item"><a class="text-dark" href="{{url('user/review')}}">Review</a></li>
+            <li class="list-group-item"><a class="text-dark" href="{{url('user/review/create')}}">Review Create</a></li>
             <li class="list-group-item"><a class="text-dark" href="{{url('contact')}}">Contact</a></li>
             <li class="list-group-item"><a class="text-dark" href="{{url('user/logout')}}">Logout</a></li>
         </ul>

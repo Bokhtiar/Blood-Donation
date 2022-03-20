@@ -164,32 +164,9 @@
 
             </style>
             <section class="row">
+                @foreach ($reviews as $r)
                 <div class="col-sm-12 col-md-3 col-lg-3 save card " >
-
-                        <div class="row my-3 ">
-                            <div class="col-md-3">
-                                <img style=" border-radius: 38px;" height="65px" width="65px" src="https://www.save.life/site/themes/savelife/assets/images/testimonials/hamza.svg" alt="">
-                            </div>
-                            <div class="col-md-9 pl-4">
-                                <span>
-                                    <span class="h7 fa fa-star checked"></span>
-                                    <span class="h7 fa fa-star checked"></span>
-                                    <span class="h7 fa fa-star checked"></span>
-                                    <span class="h7 fa fa-star"></span>
-                                    <span class="h7 fa fa-star"></span>
-                                </span><br>
-                                <span>name</span>
-                                <p>bangladesh</p>
-                            </div>
-                        </div>
-                        <div class="my-2">
-                            <p class=""  style="font-style: italic;">" We don't have to worry anymore for our emergencies. We simply request blood immediately get contacted by donors."</p>
-                        </div>
-                </div>  <!--end here card -->
-
-
-                <div class="col-sm-12 col-md-3 col-lg-3 save card ">
-                    <div class="row my-3">
+                    <div class="row my-3 ">
                         <div class="col-md-3">
                             <img style=" border-radius: 38px;" height="65px" width="65px" src="https://www.save.life/site/themes/savelife/assets/images/testimonials/hamza.svg" alt="">
                         </div>
@@ -201,38 +178,15 @@
                                 <span class="h7 fa fa-star"></span>
                                 <span class="h7 fa fa-star"></span>
                             </span><br>
-                            <span>name</span>
-                            <p>bangladesh</p>
+                            <span>{{ $r->user ? $r->user->name : '' }}</span>
+                            <p>{{ $r->user ? $r->user->location : '' }}</p>
                         </div>
                     </div>
                     <div class="my-2">
-                        <p class=""  style="font-style: italic;" >" We don't have to worry anymore for our emergencies. We simply request blood immediately get contacted by donors."</p>
+                        <p class=""  style="font-style: italic;">"{{ $r->review }}."</p>
                     </div>
-                </div> <!--end here card -->
-
-
-
-                <div class="col-sm-12 col-md-3 col-lg-3 card save">
-                    <div class="row my-3">
-                        <div class="col-md-3">
-                            <img style=" border-radius: 38px;" height="65px" width="65px" src="https://www.save.life/site/themes/savelife/assets/images/testimonials/hamza.svg" alt="">
-                        </div>
-                        <div class="col-md-9 pl-4">
-                            <span>
-                                <span class="h7 fa fa-star checked"></span>
-                                <span class="h7 fa fa-star checked"></span>
-                                <span class="h7 fa fa-star checked"></span>
-                                <span class="h7 fa fa-star"></span>
-                                <span class="h7 fa fa-star"></span>
-                            </span><br>
-                            <span>name</span>
-                            <p>bangladesh</p>
-                        </div>
-                    </div>
-                    <div class="my-2">
-                        <p class="" style="font-style: italic;">" We don't have to worry anymore for our emergencies. We simply request blood immediately get contacted by donors."</p>
-                    </div>
-                </div> <!--end here card -->
+            </div>  <!--end here card -->
+                @endforeach
 
 
             </section>
