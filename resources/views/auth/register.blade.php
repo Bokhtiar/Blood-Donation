@@ -71,13 +71,53 @@
                             </div>
                         </div>
 
+
+
                         <div class="row mb-3">
-                            <label for="Location" class="col-md-4 col-form-label text-md-end">{{ __('Location Address') }}</label>
+                            <label for="division_id" class="col-md-4 col-form-label text-md-end">{{ __('Select Division') }}</label>
 
                             <div class="col-md-6">
-                                <input id="location" type="location" class="form-control @error('location') is-invalid @enderror" name="location" value="{{ old('location') }}" required autocomplete="location">
+                                <select name="division_id" id="" required class="form-control" >
+                                    <option value="">--Select Division--</option>
+                                    @foreach (App\Models\Division::all() as $div)
+                                        <option value="{{ $div->id }}">{{ $div->name }}</option>
+                                    @endforeach
+                                </select>
 
-                                @error('location')
+                                @error('division_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="district_id" class="col-md-4 col-form-label text-md-end">{{ __('Select District') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="district_id" id="" required class="form-control" >
+                                    <option value="">--Select District--</option>
+                                    @foreach (App\Models\District::all() as $dis)
+                                        <option value="{{ $dis->id }}">{{ $dis->name }}</option>
+                                    @endforeach
+                                </select>
+
+                                @error('division_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
+
+                                @error('address')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -24,7 +24,9 @@ class User extends Authenticatable
         'password',
         'role_id',
         'phone',
-        'location',
+        'division_id',
+        'district_id',
+        'address',
         'blood'
     ];
 

@@ -41,8 +41,9 @@ Route::post('contact/store', [App\Http\Controllers\User\UserDashboardController:
 Route::get('/blood/post', [App\Http\Controllers\User\PostController::class, 'post_list']);
 Route::get('post/detail/{id}', [App\Http\Controllers\User\PostController::class, 'detail']);
 Route::get('review', [App\Http\Controllers\User\ReviewController::class, 'list']);
+Route::get('donor-search', [App\Http\Controllers\User\DonorSearchController::class, 'index']);
 
-
+// donor-search
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
