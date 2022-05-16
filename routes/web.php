@@ -30,6 +30,10 @@ Auth::routes();
 //give blood
 
 Route::get('/give/blood', [App\Http\Controllers\User\UserDashboardController::class, 'why_blood']);
+Route::get('/prepare', [App\Http\Controllers\User\UserDashboardController::class, 'prepare']);
+Route::get('/eligiblity', [App\Http\Controllers\User\UserDashboardController::class, 'eligiblity']);
+
+
 Route::get('/donation/process', [App\Http\Controllers\User\UserDashboardController::class, 'donation_process']);
 Route::get('about', [App\Http\Controllers\User\UserDashboardController::class, 'about']);
 Route::get('contact', [App\Http\Controllers\User\UserDashboardController::class, 'contact']);

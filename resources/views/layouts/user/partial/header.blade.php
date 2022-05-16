@@ -13,7 +13,7 @@ li {
 <section class="container">
     <div class="row">
         <div class="col-sm-12 col-md-3 col-lg-3 my-2">
-            <img src="{{ asset('user/b3.png') }}" height="45px" width="64px" alt="">
+            <img src="{{ asset('user/logo.jpg') }}" height="45px" width="140px" alt="">
         </div>
         <div class="col-sm-12 col-md-9 col-lg-9">
             <ul class="float-right mt-3">
@@ -40,7 +40,7 @@ li {
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('give/blood')}}">Donation Eligiblity <span class="sr-only">(current)</span></a>
+                        <a class="nav-link " href="{{url('eligiblity')}}">Donation Eligiblity <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="{{url('blood/post')}}">Blood Post <span class="sr-only">(current)</span></a>

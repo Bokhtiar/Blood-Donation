@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Contact;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class UserDashboardController extends Controller
 {
@@ -89,5 +89,15 @@ class UserDashboardController extends Controller
     {
         Auth::logout();
         return redirect('/');
+    }
+
+    public function prepare()
+    {
+        return view('user.prepare');
+    }
+
+    public function eligiblity()
+    {
+        return view('user.eligiblity');
     }
 }

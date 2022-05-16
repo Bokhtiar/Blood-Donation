@@ -18,14 +18,14 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('user/b1.png') }}" class="d-block w-100" style="height: 500px;" alt="...">
+        <img src="{{ asset('user/s2.jpg') }}" class="d-block w-100" style="height: 500px;" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('user/card.jpg') }}" class="d-block w-100" style="height: 500px;" alt="...">
+        <img src="{{ asset('user/s3.png') }}" class="d-block w-100" style="height: 500px;" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
@@ -111,7 +111,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Can I Blood Donate?</h5>
                           <p class="card-text my-4">Most people are eligible to donate life-saving blood..</p>
-                          <a href="#" class="card-link text-danger text-uppercase font-weight-bold">Learn More</a>
+                          <a href="{{ url('prepare') }}" class="card-link text-danger text-uppercase font-weight-bold">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Prepare to Donate</h5>
                           <p class="card-text my-4">Donating is pretty easy…and we have some tips to make it even easier.</p>
-                          <a href="#" class="card-link text-danger text-uppercase font-weight-bold ">Learn More</a>
+                          <a href="{{ url('prepare') }}" class="card-link text-danger text-uppercase font-weight-bold ">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Know Your Blood Type</h5>
                           <p class="card-text my-4">If you’re blood type is O-Negative, you’re a “Universal Donor,” because your blood can be transfused into anyone in an emergency.</p>
-                          <a href="#" class="card-link text-danger text-uppercase font-weight-bold">Learn More</a>
+                          <a href="{{ url('prepare') }}" class="card-link text-danger text-uppercase font-weight-bold">Learn More</a>
                         </div>
                     </div>
                 </div>
