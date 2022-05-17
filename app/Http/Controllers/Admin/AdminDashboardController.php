@@ -16,7 +16,8 @@ class AdminDashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $users = User::where('role_id', 2)->get();
+        return view('admin.index', compact('users'));
     }
 
     /**
