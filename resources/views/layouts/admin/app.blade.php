@@ -29,7 +29,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('admin')}}/assets/css/style.css" rel="stylesheet">
-
+    @yield('css')
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -70,7 +70,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('admin')}}/assets/js/main.js"></script>
-
+  @yield('js')
 </body>
 
 </html>

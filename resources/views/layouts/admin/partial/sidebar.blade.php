@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="@route('admin.dashboard')">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -48,7 +48,20 @@
         </ul>
       </li><!-- End Components Nav -->
 
-     
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Donor Search</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{url('admin/donor/search')}}">
+              <i class="bi bi-circle"></i><span>Donor Search</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+
     </ul>
 
   </aside>

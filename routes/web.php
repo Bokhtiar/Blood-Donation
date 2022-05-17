@@ -65,6 +65,7 @@ Route::group(["as"=>'user.', "prefix"=>'user',  "middleware"=>['auth','user']],f
 
 Route::group(["as"=>'admin.', "prefix"=>'admin', "middleware"=>['auth','admin']],function(){
     Route::get('dashboard', [App\Http\Controllers\Admin\AdminDashboardController::class, 'index'])->name('dashboard');
+    Route::get('donor/search', [App\Http\Controllers\Admin\AdminDashboardController::class, 'donor']);
     //division
     Route::resource('division', DivisionController::class);
     //district
