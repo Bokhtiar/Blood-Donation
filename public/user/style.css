@@ -22,13 +22,11 @@
 
 .navbar-nav>li>a.active,
 .navbar-nav>li>a:focus {
-    margin-top: 7px;
-    line-height: 10px;
+
     display: block;
-    margin-top: 7px;
     text-align: center;
-    background-color: var(--white);
-    color: var(--black) !important;
+    background-color: #17202A;
+    color: var(--white) !important;
     border-radius: 5px;
 }
 

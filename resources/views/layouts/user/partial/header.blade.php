@@ -36,26 +36,26 @@ li {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav text-center" >
                     <li class="nav-item active" style="margin-left: 45px;">
-                        <a  class="nav-link "  href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
+                        <a  class="nav-link {{ Request::is('/') ? 'active' : '' }} "  href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('eligiblity')}}">Donation Eligiblity <span class="sr-only">(current)</span></a>
+                        <a class="nav-link {{ Request::is('eligiblity') ? 'active' : '' }} " href="{{url('eligiblity')}}">Donation Eligiblity <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('blood/post')}}">Blood Post <span class="sr-only">(current)</span></a>
+                        <a class="nav-link {{ Request::is('blood/post') ? 'active' : '' }} " href="{{url('blood/post')}}">Blood Post <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('review')}}">Reviews <span class="sr-only">(current)</span></a>
+                        <a class="nav-link {{ Request::is('review') ? 'active' : '' }} " href="{{url('review')}}">Reviews <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('donor-search')}}">Donor Search</a>
+                        <a class="nav-link {{ Request::is('donor-search') ? 'active' : '' }}" href="{{url('donor-search')}}">Donor Search</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('about')}}">About-Us</a>
+                        <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{url('about')}}">About-Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{url('contact')}}">Contact-Us</a>
+                        <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{url('contact')}}">Contact-Us</a>
                     </li>
 
                     <li class="nav-item dropdown">
